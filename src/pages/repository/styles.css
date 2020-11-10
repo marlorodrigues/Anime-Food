@@ -1,0 +1,38 @@
+#grid-cont {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+#grid-cont > div {
+    display: -webkit-box;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 10px 90px 10px 10px;
+    height: 35vh;
+}
+
+#img-item1-kart{
+    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
+    height: 34.7vh;
+}
+
+#description-food-kart{
+    width: 40%;
+    height: 50%;
+    margin-left: 8px;
+}
+
+#text-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#price-container-kart{
+    font-weight: bold;
+}

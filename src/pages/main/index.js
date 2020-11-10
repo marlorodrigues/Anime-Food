@@ -2,10 +2,18 @@ import React, { Component } from 'react';
 import api from '../../services/api';
 import './style.css';
 import { Link } from 'react-router-dom';
+import lamen from './lamen-naruto.jpeg'
+import porkBacon from './pork-bacon.jpeg'
+import ramen from './ramen-shokugeki.jpeg'
+import rolinhoPrimavera from './rolinho-primavera.jpeg'
+import comida from './sei-la.jpeg'
+import bentou from './bentou.jpeg'
+// import omelete from './omelete.jpeg'
 
 export default class Main extends Component {
     state = {
         repositorios: [],
+        carrinho: [],
         page: 1
     };
 
@@ -20,14 +28,13 @@ export default class Main extends Component {
         this.setState({ repositorios: response.data, page }); //Atualiza o estado atual 
     }
 
-
     prevPage = () => { //Volta uma pagina
         const { page } = this.state;
 
         if (page === 1) return;
 
-        const pageNumber = page - 1;
-        this.loadProducts(pageNumber);
+        // const pageNumber = page - 1;
+        // this.loadProducts(pageNumber);
     }
 
     nextPage = () => { //Avanca uma pagina
@@ -35,30 +42,83 @@ export default class Main extends Component {
 
         if (page === 1) return;
 
-        const pageNumber = page + 1;
+        // const pageNumber = page + 1;
 
-        this.loadProducts(pageNumber);
+        // this.loadProducts(pageNumber);
+    }
+
+    addOnLittleCar = (e, idProduct) => {
+        console.log("Adicionando o produto no carrinho -> " + idProduct);
+        // this.setState({ carrinho: idProduct }); //Atualiza o estado atual 
     }
 
     render() { //Renderiza o componente
-        const { repositorios, page } = this.state;
+        const { page } = this.state;
 
         return (
             <div className="product-list">
-                {repositorios.map(
-                    repo => (
-                        <article key={repo.id} id="article">
-                            <strong>{repo.name}</strong>
-                            <p>{repo.full_name}</p>
-                            <Link to={`/repository/${repo.id}`}>Acessar</Link>
-                        </article>
-                    )
-                )}
+                <div className="grid-container">
+                    <div className="item1">
+                        <img src={lamen} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 24,90</p>
+                        </div>
+                        <Link to="/" onClick={(e) => this.addOnLittleCar(e, 200)}>Quero esse!</Link>
+                    </div>
+                    <div className="item1">
+                        <img src={porkBacon} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 18,90</p>
+                        </div>
+                        <Link to="/" onClick={(e) => this.addOnLittleCar(e, 300)}>Quero esse!</Link>
+                    </div>
+                    <div className="item1">
+                        <img src={ramen} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 28,90</p>
+                        </div>
+                        <Link href="#">Quero esse!</Link>
+                    </div>
+                    <div className="item1">
+                        <img src={rolinhoPrimavera} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 19,90</p>
+                        </div>
+                        <Link href="#">Quero esse!</Link>
+                    </div>
+                    <div className="item1">
+                        <img src={comida} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 34,90</p>
+                        </div>
+                        <Link href="#">Quero esse!</Link>
+                    </div>
+                    <div className="item1">
+                        <img src={bentou} id="img-item1" alt="imagem de comida" />
+                        <p id="description-food">Este e so um teste para testar coisas que precisam ser testadas. Pois se nao forem testadas talvez nao funcionem.</p>
+                        <div id="price-container">
+                            <p id="name-price">Preço</p>
+                            <p id="price">R$ 12,90</p>
+                        </div>
+                        <Link href="#">Quero esse!</Link>
+                    </div>
+                </div>
                 <div className="actions">
                     <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
                     <button disabled={page === 1} onClick={this.nextPage}>Proximo</button> {/* No meu caso so ha uma pagina, se houvesse outra, e so puxar pela api */}
                 </div>
-            </div>
+            </div >
+
         )
     }
 }

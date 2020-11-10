@@ -1,10 +1,81 @@
-header#main-header {
+div#container-header {
     height: 60px;
     background: #da552f;
     font-size: 18px;
     font-weight: bold;
     color: #FFF;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+#linha-horizontal {
+    width: 100%;
+	border: 1px solid grey;
+}
+
+#main-header{
+    margin-left: 160px;
+    font-size: 28px;
+}
+
+form {
+    border: 2px;
+    display: inline-flex;
+    padding: 4px;
+}
+  
+form > input {
+    border: none;
+}
+
+.forShadow:hover{
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(184,175,184,1);
+    -moz-box-shadow: 0px 3px 4px 0px rgba(184,175,184,1);
+    box-shadow: 0px 3px 4px 0px rgba(184,175,184,1);
+}
+  
+form > button {
+    background: white;
+    border: none;
+    color: #fff;
+    padding: 8px 10px;
+    width: 35px;
+    height: 26px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+#search-input{
+    height: 33px;
+    width: 173px;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color: black;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-family:  'Times New Roman', Times, serif;
+}
+
+#search-button{
+    background-image: url('./search-icon.png');
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    width: 25px;
+    height: 33px;
+}
+
+#search-button:hover{
+    opacity: 1;
+}
+
+#little-market-car{
+    background-image: url('./bolsa-de-compras.png');
+    width: 32px;
+    height: 32px;
+}
+
+#group-of-buttons{
+    margin-right: 150px;
 }

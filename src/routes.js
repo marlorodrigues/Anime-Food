@@ -1,15 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Main from './pages/main/index';
-import Repo from './pages/repository/index';
+import Kart from './pages/repository/index';
 
 const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Main} />
-            <Route path="/repository/:id" component={Repo} />
+            <Route path="/kart" component={Kart} />
         </Switch>
-
     </BrowserRouter>
 );
 

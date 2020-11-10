@@ -10,3 +10,9 @@ body {
     background: #fafafa;
     color: #333;
 }
+
+#page{
+    max-width: 980px;
+    margin: 0% 10% 10% 12%;
+}
+
