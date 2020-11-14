@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available on
 
-for Desktop: https://animefood.herokuapp.com/
+###for Desktop: ` https://animefood.herokuapp.com/ `
 
 for Mobile: --
 
