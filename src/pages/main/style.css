@@ -1,0 +1,124 @@
+.product-list {
+    max-width: 980px;
+    margin: 20px auto 0;
+    padding: 0;
+}
+
+.food-container{
+    height: fit-content;
+}
+
+.item1 { 
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    grid-gap: 10px;
+    background-color: #fafafa;
+    padding: 8px;
+    padding-left: 23px;
+    max-width: 970px;
+    max-height: 800px;
+}
+
+.grid-container > div {
+    display: flexbox;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#img-item{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#price-container{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#price {
+    font-weight: bold;
+}
+
+#name-price {
+    font-weight: bold;
+}
+
+#description-food{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #999;
+    margin-top: 5px;
+    line-height: 24px;
+}
+
+a {
+    height: 42px;
+    border-radius: 0px 0px 8px 8px;
+    border: 2px solid  #da552f;
+    background: none;
+    margin-top: 10px;
+    background-color: #da552f;
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+a:hover {
+    border: 2px solid  royalblue;
+    background: royalblue;
+    color: #fff;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 250px;
+    margin-right: 265px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px;
+    background: #da552f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
