@@ -10,7 +10,7 @@ import api from '../../services/api';
 export default class LittleKart extends Component {
     state = {
         foods: [],
-        lenght: Number
+        lenght: Number,
     };
 
     componentDidMount() { //Executa uma acao assim q o componente e renderizado 
@@ -26,6 +26,7 @@ export default class LittleKart extends Component {
             const response = await api.get('showMenu/' + localStorage.getItem("item" + index));
             const { menu } = response.data
             var array = [];
+
 
             array.push(menu);
             counter++;

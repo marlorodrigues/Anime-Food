@@ -7,7 +7,7 @@ const changeToKartPAge = () => {
 }
 //A mesma coisa do que se fizesse com o template da classe
 const Header = () => (
-    <div>
+    <div id="header-page">
         <div id="container-header">
             <header id="main-header">Anime Food</header>
             <div id="group-of-buttons">
